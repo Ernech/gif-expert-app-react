@@ -2,10 +2,10 @@ import React,{useState} from 'react';
 import { AddCategory } from './components/AddCategory';
 import { GifGrid } from './components/GifGrid';
 
-const GiffExpertApp = () =>{
+const GifExpertApp = ({defaultCategories=[]}) =>{
 
 
-    const [categories,setCategories] = useState(['Music'])
+    const [categories,setCategories] = useState(defaultCategories);
 
     // const handleAdd = (e)=>{
       
@@ -15,7 +15,7 @@ const GiffExpertApp = () =>{
 
     return(
       <>
-      <h2>GiffExpertApp</h2>
+      <h2>GifExpertApp</h2>
 
     <AddCategory setCategories = {setCategories}/>
 
@@ -34,4 +34,4 @@ const GiffExpertApp = () =>{
   
   }
 
-export default GiffExpertApp;
+export default GifExpertApp;
